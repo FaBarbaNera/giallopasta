@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giallopasta - Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Stili per le recensioni */
+    .reviews-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px; /* Altezza fissa per il contenitore delle recensioni */
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .review {
+      display: none;
+      text-align: center;
+      font-size: 18px;
+      width: 80%;
+      background-color: #f8f8f8; /* Colore di sfondo del quadrato */
+      padding: 20px;
+      border: 2px solid #f1c40f; /* Bordo giallo attorno alla recensione */
+      border-radius: 10px; /* Bordo arrotondato */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per dare l'effetto di un quadrato */
+      transition: transform 0.3s ease;
+    }
+
+    .review.active {
+      display: block;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 30px;
+    }
+
+    /* Nome del recensore */
+    .reviewer-name {
+      font-weight: bold;
+      color: #333;
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    /* Stili per il testo della recensione */
+    .review p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+   
+  <!-- Include il Menu a Hamburger -->
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="recensioni.html">Recensioni</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Logo sotto la barra del menu -->
+  <div class="logo-container">
+    <img src="logo1.png" alt="Logo Giallopasta" class="logo-img">
+  </div>
+
+  <!-- Contenuto della Pagina recensioni -->
+  <section id="menu">
+    <h1>Le nostre recensioni</h1>
+    <p>Scopri cosa dicono di noi!</p>
+
+    <!-- Contenitore delle recensioni -->
+    <div class="reviews-container">
+      <div class="review" id="review1">
+        <div class="stars">★★★★★</div>
+        <p>Ottimo ristorante, cibo fantastico e servizio impeccabile! Tornerò sicuramente!</p>
+        <p class="reviewer-name">Giovanni R.</p>
+      </div>
+      <div class="review" id="review2">
+        <div class="stars">★★★★★</div>
+        <p>Excellente restaurant, des plats délicieux et un service irréprochable. Je reviendrai sûrement!</p>
+        <p class="reviewer-name">Marie L.</p>
+      </div>
+      <div class="review" id="review3">
+        <div class="stars">★★★★★</div>
+        <p>Great restaurant, delicious food, and excellent service. I'll definitely come back!</p>
+        <p class="reviewer-name">John D.</p>
+      </div>
+      <div class="review" id="review4">
+        <div class="stars">★★★★★</div>
+        <p>Ein fantastisches Restaurant, leckeres Essen und hervorragender Service. Ich komme sicher wieder!</p>
+        <p class="reviewer-name">Hans M.</p>
+      </div>
+      <div class="review" id="review5">
+        <div class="stars">★★★★★</div>
+        <p>Il ristorante ha un'atmosfera accogliente, il proprietario è davvero cordiale.</p>
+        <p class="reviewer-name">Alessandro P.</p>
+      </div>
+      <div class="review" id="review6">
+        <div class="stars">★★★★★</div>
+        <p>Un’esperienza indimenticabile, piatti deliziosi e ambiente molto accogliente!</p>
+        <p class="reviewer-name">Luca T.</p>
+      </div>
+      <div class="review" id="review7">
+        <div class="stars">★★★★★</div>
+        <p>La qualità è ottima come il servizio.</p>
+        <p class="reviewer-name">Sara C.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Giallopasta. Tutti i diritti riservati.</p>
+  <!-- Aggiungi questa parte dove desideri nel tuo HTML -->
+<p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
+
+  </footer>
+
+  <script>
+    // JavaScript per alternare le recensioni ogni 3 secondi
+    let currentReview = 0;
+    const reviews = document.querySelectorAll('.review');
+
+    // Funzione per nascondere tutte le recensioni
+    function hideReviews() {
+      reviews.forEach(review => {
+        review.classList.remove('active');
+      });
+    }
+
+    // Funzione per mostrare la recensione corrente
+    function showReview(index) {
+      hideReviews();
+      reviews[index].classList.add('active');
+    }
+
+    // Mostra la prima recensione
+    showReview(currentReview);
+
+    // Cambia la recensione ogni 3 secondi
+    setInterval(() => {
+      currentReview = (currentReview + 1) % reviews.length;
+      showReview(currentReview);
+    }, 3000); // Cambia recensione ogni 3 secondi
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+/* Stili generali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1c40f; /* Giallo Giallopasta */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  /* Hamburger icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+  }
+  
+  /* Menu Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Nasconde il menu su schermi piccoli */
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background-color: #f1c40f;
+      border-radius: 5px;
+      width: 200px;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links.show {
+      display: block; /* Mostra il menu quando la classe "show" è aggiunta */
+    }
+  
+    .nav-links li {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  
+  /* Logo sotto la barra del menu */
+  .logo-container {
+    text-align: center; /* Centra il logo orizzontalmente */
+    margin-top: 80px; /* Distanza dalla barra di navigazione */
+    margin-bottom: 30px; /* Spazio sotto il logo */
+  }
+  
+  .logo-img {
+    max-width: 300px; /* Aumenta la larghezza massima del logo */
+    width: auto; /* Mantieni le proporzioni del logo */
+    height: auto; /* Impedisce la distorsione del logo */
+  }
+  
+  /* Sezione principale */
+  section {
+    padding: 50px 20px;
+    text-align: center; /* Centra il contenuto orizzontalmente */
+  }
+  
+  .content {
+    max-width: 1000px;
+    margin: 0 auto; /* Centra la sezione contenente il titolo e il paragrafo */
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #f1c40f;
+    margin-bottom: 20px; /* Distanza tra il titolo e il paragrafo */
+  }
+  
+  p {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 40px; /* Spazio tra il testo e il contenuto successivo */
+  }
+  /* Contenitore del pulsante "Scopri il Menù" */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    margin-top: 20px; /* Distanza tra il testo e il pulsante */
+  }
+  
+  /* Pulsante "Scopri il Menù" */
+  .menu-btn {
+    background-color: #f1c40f; /* Giallo Giallopasta */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border-radius: 25px; /* Bordi arrotondati */
+    cursor: pointer;
+    margin-bottom: 30px; /* Distanza tra il pulsante e la galleria di immagini */
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-btn:hover {
+    background-color: #e0b40f; /* Colore del pulsante quando hover */
+  }
+  
+  /* Contenitore per la galleria di immagini */
+  .image-slider {
+    width: 50%;
+    margin: 20px auto;
+    
+    overflow: hidden; /* Nasconde le immagini fuori dal contenitore */
+    border: 3px solid #f1c40f; /* Bordo rettangolare giallo */
+    border-radius: 10px; /* Rende gli angoli arrotondati */
+    padding: 10px;
+    background-color: #fff;
+    position: relative; /* Necessario per posizionare correttamente l'immagine */
+    margin-bottom: 80px; /* Aggiungi spazio per compensare il footer fisso */
+
+
+  }
+  
+  /* Contenitore delle immagini per mantenerle con dimensioni uguali */
+.slider-images {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transizione per scorrere le immagini */
+    width: 100%;
+    justify-content: space-between; /* Distanza tra le immagini */
+  }
+  
+  .slider-images img {
+    width: calc(100% - 20px); /* Le immagini devono riempire lo spazio meno i margini */
+    height: auto; /* Mantiene l'aspect ratio originale */
+    object-fit: cover; /* Copre l'area senza distorsioni, ritagliando le immagini */
+    border: 2px solid #f1c40f; /* Bordo giallo attorno alle immagini */
+    border-radius: 8px; /* Angoli arrotondati per le immagini */
+    margin: 10px; /* Aggiungi margini su tutti i lati delle immagini (10px sopra, sotto, destra, sinistra) */
+  }
+  
+  
+  /* Linea di separazione */
+  .separator-line {
+    width: 80%;
+    height: 2px;
+    background-color: #333;
+    margin: 30px auto; /* Centra la linea orizzontale */
+  }
+  
+  /* Footer Fisso al fondo della pagina */
+  footer {
+    background-color: #000000; /* Colore di sfondo scuro per il footer */
+    color: #ffffff; /* Testo bianco */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Cambia da fixed a relative */
+  margin-top: auto; /* Spinge il footer verso il fondo */
+    bottom: 0;        /* Posizionato al fondo della pagina */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  footer p {
+    margin: 0;
+    color: #ffffff; /* Colore blu per il testo nei paragrafi del footer */
+
+    font-size: 14px;
+  }
+  
+
+  /* Sezione Titoli e Descrizioni pagina home*/
+.titles-descriptions {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .title-description-block {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  /* Puoi aggiungere classi per i colori personalizzati, se preferisci */
+  .title.red {
+    color: #FF5733;
+  }
+  
+  .title.blue {
+    color: #3498db;
+  }
+  
+  .title.green {
+    color: #2ecc71;
+  }
+
+  .title.pink {
+    color: #e11298;
+  }
+  
+  .description.red {
+    color: #FF5733;
+  }
+  
+  .description.blue {
+    color: #3498db;
+  }
+  
+  .description.green {
+    color: #2ecc71;
+  }
+
+  .description.pink {
+    color: #e11298;
+  }
+   /* Sezione Titoli e Descrizioni pagina home fine*/ 
+
+
+   /* Stile per il link Privacy e Policy */
+.privacy-policy-link {
+    color: #f1c40f; /* Colore giallo per il link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-weight: bold; /* Rende il testo più evidenziato */
+}
+
+.privacy-policy-link:hover {
+    color: #e0b40f; /* Colore giallo più scuro quando il link è in hover */
+    text-decoration: underline; /* Aggiunge la sottolineatura quando il mouse ci passa sopra */
+}
