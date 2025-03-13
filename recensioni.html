@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giallopasta - Menu</title>
+  <title>Giallopasta - Recensioni</title>
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -78,7 +78,7 @@
   </div>
 
   <!-- Contenuto della Pagina recensioni -->
-  <section id="menu">
+  <section id="recensioni">
     <h1>Le nostre recensioni</h1>
     <p>Scopri cosa dicono di noi!</p>
 
@@ -127,9 +127,7 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Giallopasta. Tutti i diritti riservati.</p>
-  <!-- Aggiungi questa parte dove desideri nel tuo HTML -->
-<p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
-
+    <p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
   </footer>
 
   <script>
@@ -159,6 +157,14 @@
       showReview(currentReview);
     }, 3000); // Cambia recensione ogni 3 secondi
   </script>
+    <!-- JavaScript per il toggle del menu -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+  <script src="app.js"></script> <!-- Collega il JavaScript -->
 
 </body>
 </html>

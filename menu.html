@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
 
   <!-- Include il Menu a Hamburger -->
   <nav class="navbar">
@@ -24,6 +23,7 @@
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
   </nav>
+  
   <!-- Logo sotto la barra del menu -->
   <div class="logo-container">
     <img src="logo1.png" alt="Logo Giallopasta" class="logo-img">
@@ -31,22 +31,30 @@
 
   <!-- Contenuto della Pagina Menu -->
   <section id="menu">
-    <h1> Benvenuti da GIALLO PASTA! </h1>
+    <h1>Benvenuti da GIALLO PASTA!</h1>
     <p>Il tuo ristorante Vista Mare</p>
   </section>
+  
   <!-- Contenitore per centrare il pulsante -->
   <div class="button-container">
     <a href="https://www.google.com" class="menu-btn" target="_blank">Scopri il Menù</a>
   </div>
 
   <script src="app.js"></script>
-  <!-- Footer -->
-<footer>
-    <p>&copy; 2025 Giallopasta. Tutti i diritti riservati.</p>
-  <!-- Aggiungi questa parte dove desideri nel tuo HTML -->
-<p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
-
-  </footer>
   
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Giallopasta. Tutti i diritti riservati.</p>
+    <p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
+  </footer>
+    <!-- JavaScript per il toggle del menu -->
+    <script>
+        function toggleMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('show');
+        }
+      </script>
+      <script src="app.js"></script> <!-- Collega il JavaScript -->
+
 </body>
 </html>

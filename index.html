@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giallopasta - Home</title>
   <link rel="stylesheet" href="style.css">
-
   <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-
 
   <!-- Include il Menu a Hamburger -->
   <nav class="navbar">
@@ -36,24 +34,23 @@
     <h1>Benvenuti da GIALLO PASTA!</h1>
     <p>Vieni a scoprire il miglior ristorante vista Mare di Giulianova</p>
 
-     <!-- Pulsante "Scopri il Menù" con il link al menù -->
-     <a href="https://www.google.com" class="menu-btn" target="_blank">Scopri il Menù</a>
-    </div>
-      <!-- Linea di separazione -->
-      <div class="separator-line"></div>
-    </section>
+    <!-- Pulsante "Scopri il Menù" con il link al menù -->
+    <a href="https://www.google.com" class="menu-btn" target="_blank">Scopri il Menù</a>
 
-    <!-- Contenitore per la galleria di immagini -->
-    <div class="image-slider">
-      <div class="slider-images">
-        <img src="images/image1.jpg" alt="Piatto 1">
-        <img src="images/image2.jpg" alt="Piatto 2">
-        <img src="images/image1.jpg" alt="Piatto 3">
-        <img src="images/image1.jpg" alt="Piatto 4">
-        <img src="images/image2.jpg" alt="Piatto 5">
-      </div>
-    </div>
+    <!-- Linea di separazione -->
+    <div class="separator-line"></div>
   </section>
+
+  <!-- Contenitore per la galleria di immagini -->
+  <div class="image-slider">
+    <div class="slider-images">
+      <img src="images/image1.jpg" alt="Piatto 1">
+      <img src="images/image2.jpg" alt="Piatto 2">
+      <img src="images/image1.jpg" alt="Piatto 3">
+      <img src="images/image2.jpg" alt="Piatto 4">
+      <img src="images/image1.jpg" alt="Piatto 5">
+    </div>
+  </div>
 
   <!-- Sezione Titoli e Descrizioni -->
   <section class="titles-descriptions">
@@ -72,20 +69,26 @@
       <p class="description">L'impasto lo prepariamo con farine di alta qualità e...la ricetta originale Romagnola.</p>
     </div>
 
-  <div class="title-description-block" style="color: #e11298;">
-    <h2 class="title">I Nostri Secondi</h2>
-    <p class="description">Dalle Insalatone agli Arrosticini solo prodotti Freschi e Selezionati.</p>
-  </div>
-</section>
+    <div class="title-description-block" style="color: #e11298;">
+      <h2 class="title">I Nostri Secondi</h2>
+      <p class="description">Dalle Insalatone agli Arrosticini solo prodotti Freschi e Selezionati.</p>
+    </div>
+  </section>
 
-  <script src="app.js"></script>
   <!-- Footer -->
-<footer>
+  <footer>
     <p>&copy; 2025 Giallopasta. Tutti i diritti riservati.</p>
-    <!-- Aggiungi questa parte dove desideri nel tuo HTML -->
-<p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
-
+    <p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
   </footer>
+
+  <!-- JavaScript per il toggle del menu -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+  <script src="app.js"></script> <!-- Collega il JavaScript -->
   
 </body>
 </html>

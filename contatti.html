@@ -8,64 +8,63 @@
   <link rel="manifest" href="/manifest.json">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome per le icone -->
   <style>
-   /* Stili per i pulsanti */
-  /* Stili per i pulsanti */
-.buttons-container {
-  display: flex;
-  flex-direction: column;  /* Disporre i pulsanti in colonna */
-  align-items: center;     /* Centra i pulsanti orizzontalmente */
-  gap: 20px;
-  margin-top: 40px;
-}
+    /* Stili per i pulsanti */
+    .buttons-container {
+      display: flex;
+      flex-direction: column;  /* Disporre i pulsanti in colonna */
+      align-items: center;     /* Centra i pulsanti orizzontalmente */
+      gap: 20px;
+      margin-top: 40px;
+    }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  width: 250px; /* Imposta una larghezza fissa per i pulsanti */
-  box-sizing: border-box; /* Per includere il padding nel calcolo della larghezza */
-}
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      width: 250px; /* Imposta una larghezza fissa per i pulsanti */
+      box-sizing: border-box; /* Per includere il padding nel calcolo della larghezza */
+    }
 
-.button i {
-  margin-right: 10px;
-  font-size: 20px;
-}
+    .button i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
 
-.button:hover {
-  opacity: 0.8;
-}
+    .button:hover {
+      opacity: 0.8;
+    }
 
-/* Colori specifici per ogni pulsante */
-.call-button {
-  background-color: #2e8bdc; /* WhatsApp */
-}
+    /* Colori specifici per ogni pulsante */
+    .call-button {
+      background-color: #2e8bdc; /* WhatsApp */
+    }
 
-.facebook-button {
-  background-color: #3b5998; /* Facebook */
-}
+    .facebook-button {
+      background-color: #3b5998; /* Facebook */
+    }
 
-.instagram-button {
-  background-color: #E1306C; /* Instagram */
-}
+    .instagram-button {
+      background-color: #E1306C; /* Instagram */
+    }
 
-.location-button {
-  background-color: #05316e; /* Google Maps */
-}
+    .location-button {
+      background-color: #05316e; /* Google Maps */
+    }
 
-.google-button {
-  background-color: #ff0000; /* Google */
-}
+    .google-button {
+      background-color: #ff0000; /* Google */
+    }
 
-.whatsapp-button {
-  background-color: #25D366; /* WhatsApp */
-}
+    .whatsapp-button {
+      background-color: #25D366; /* WhatsApp */
+    }
 
   </style>
 </head>
@@ -91,9 +90,9 @@
   </div>
 
   <!-- Contenuto della Pagina contatti -->
-  <section id="menu">
+  <section id="contatti">
     <h1>I nostri contatti</h1>
-    <p>Scopri le nostre novita su Instagram e Facebook</p>
+    <p>Scopri le nostre novità su Instagram e Facebook</p>
     <p>Prenota o suggerisci ad un amico di venirci a trovare!</p>
 
     <!-- Contenitore dei pulsanti -->
@@ -137,8 +136,15 @@
   <footer>
     <p>&copy; 2025 Giallopasta. Tutti i diritti riservati.</p>
    <!-- Aggiungi questa parte dove desideri nel tuo HTML -->
-<p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
-
+    <p><a href="privacyepolicy.html" class="privacy-policy-link">Privacy e Policy</a></p>
   </footer>
+    <!-- JavaScript per il toggle del menu -->
+    <script>
+        function toggleMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('show');
+        }
+      </script>
+      <script src="app.js"></script> <!-- Collega il JavaScript -->
 </body>
 </html>
