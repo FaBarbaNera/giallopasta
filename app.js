@@ -1,8 +1,9 @@
+// Funzione per il menu hamburger
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
-  }
-  
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
+
 /* Stili generali contenitore immagini home page */
 let currentIndex = 0;
 
@@ -22,20 +23,31 @@ function startImageSlider() {
 // Avvia lo slider
 startImageSlider();
 
-
 /* Stili generali contenitore immagini home page */
 
 // Funzione per rilevare quando si è arrivati in fondo alla pagina
 window.onscroll = function() {
-    let footer = document.querySelector('footer'); // Seleziona il footer
-    let scrollHeight = document.documentElement.scrollHeight; // Altezza totale della pagina
-    let scrollPosition = window.innerHeight + window.scrollY; // Altezza della finestra + posizione dello scroll
-  
-    // Se l'utente ha raggiunto la fine della pagina
-    if (scrollPosition >= scrollHeight - 100) {  // Aggiungere uno spazio di 100px dal fondo per attivare il footer
-      footer.classList.add('visible');
-    } else {
-      footer.classList.remove('visible');
-    }
-  };
-  
+  let footer = document.querySelector('footer'); // Seleziona il footer
+  let scrollHeight = document.documentElement.scrollHeight; // Altezza totale della pagina
+  let scrollPosition = window.innerHeight + window.scrollY; // Altezza della finestra + posizione dello scroll
+
+  // Se l'utente ha raggiunto la fine della pagina
+  if (scrollPosition >= scrollHeight - 100) {  // Aggiungere uno spazio di 100px dal fondo per attivare il footer
+    footer.classList.add('visible');
+  } else {
+    footer.classList.remove('visible');
+  }
+};
+
+// Registrazione del Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registrato con successo:', registration);
+      })
+      .catch((error) => {
+        console.log('Errore durante la registrazione del Service Worker:', error);
+      });
+  });
+}
