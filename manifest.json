@@ -1,0 +1,41 @@
+{
+    "name": "Giallopasta",
+    "short_name": "Giallopasta",
+    "description": "Il miglior ristorante vista Mare di Giulianova. Scopri il nostro menu e le specialità!",
+    "start_url": "https://fabarbanera.github.io/giallopasta/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FF5733",
+    "icons": [
+      {
+        "src": "logo1.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "logo1.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "lang": "it",
+    "orientation": "portrait",
+    "scope": "/",
+    "categories": [
+      "restaurant",
+      "food"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshot1.jpg",
+        "sizes": "640x480",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "images/screenshot2.jpg",
+        "sizes": "640x480",
+        "type": "image/jpeg"
+      }
+    ]
+  }
+  
